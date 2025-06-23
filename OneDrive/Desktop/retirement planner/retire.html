@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" href="retire.css">
+    <title>Retirement Calculator</title>
+</head>
+
+<body>
+
+    <h3 id="ans">
+    </h3>
+    <div class="container">
+        <div class="title">Investment calculator</div>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Monthly expenses</span>
+                        <input type="number" placeholder="Enter your expenses" id="a">
+                    
+                        <div class="input-box">
+                        <span class="details">inflation rate</span>
+                        <input type="number" placeholder="Enter the rate of inlation" id="b">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Number of yeras</span>
+                        <input type="number" placeholder="years"  id="c">
+                    </div>
+
+                    <div class="button">
+                        <input type="button" value="Calculate" onclick="Cal_FV()">
+                        <script type="text/javascript" src="./retire.js"></script>
+
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

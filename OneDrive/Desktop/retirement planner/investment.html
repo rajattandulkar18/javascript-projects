@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Investment planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Investment Calculator"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div class="container section">
+  <div class="columns">
+    <div class="column">
+      <form id="calc-form">
+        <h1 class="title">Enter Your Information</h1>
+        <div class="field">
+          <label class="label" for="start-age">Contribution start age:</label>
+          <div class="control">
+            <input class="input age" type="number" inputmode="numeric" pattern="[0-9]*" id="start-age" min="0" max="100" value="20" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="stop-age">Contribution stop age:</label>
+          <div class="control">
+            <input class="input age" type="number" inputmode="numeric" pattern="[0-9]*" id="stop-age" min="1" max="100" value="65" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="annual-contribution">Annual contribution</label>
+          <div class="field has-addons">
+            <div class="control">
+              <a class="button is-static">$</a>
+            </div>
+            <div class="control">
+              <input class="input contribution" type="number" inputmode="numeric" pattern="[0-9]*" id="annual-contribution" min="0" value="20000">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="annual-return">Rate of return</label>
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input percent" type="text" inputmode="numeric" pattern="[0-9]*" value="4" id="annual-return" required>
+            </div>
+            <div class="control">
+              <a class="button is-static">%</a>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="button is-link is-large">Calculate</button>
+      </form>
+    </div>
+    <div class="column is-two-thirds">
+      <div id="calc-results">
+        <div class="results has-text-centered">
+          <h1 class="title">And Asset Growth</h1>
+        </div>
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
